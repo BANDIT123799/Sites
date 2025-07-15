@@ -47,18 +47,6 @@ header {
     display: block;
 }
 
-h1 {
-    font-family: 'Roboto Condensed', Arial, sans-serif;
-    font-weight: 700;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-left: 75px;
-    padding-right: 75px;
-    z-index: 1000;
-    height: 32px;
-    text-align: center;
-}
-
 .header {
     font-family: 'Barlow Condensed', Arial, sans-serif;
     font-weight: 500;
