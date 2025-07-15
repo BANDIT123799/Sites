@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap');
 
 header {
     background-color: white;
@@ -9,16 +10,30 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
+    height: 70px;
 }
 
 .github-link {
     font-family: 'Barlow Condensed', Arial, sans-serif;
     font-weight: 500;
+    font-size: large;
     position: fixed;
     top: 20px;
     right: 75px;
     text-decoration: none;
     color: black;
+}
+
+h1 {
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 75px;
+    padding-right: 75px;
+    z-index: 1000;
+    height: 32px;
+    text-align: center;
 }
 
 h2 {
@@ -32,5 +47,28 @@ h2 {
 
 body {
     margin: 0;           
-    padding-top: 50px;
+    padding-top: 70px;
+    height: 100vh;
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 0 75px;
+}
+
+.grid-item {
+    height: 200px;
+    background-color: #222;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Barlow Condensed', Arial, sans-serif;
+    font-weight: 500;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
