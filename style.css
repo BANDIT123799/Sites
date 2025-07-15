@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap');
 
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('/fonts/barlow.woff2') format('woff2');
+  font-display: swap;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -99,7 +105,18 @@ body {
 }
 
 .grid-item:hover {
-    transform: scale(1.07);
+    transform: scale(1.05);
     box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+.textbox {
+    color: white;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.grid-item:hover .textbox {
+    opacity: 1;
 }
 
