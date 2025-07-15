@@ -73,12 +73,16 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     padding: 0 75px;
-    transition: grid-template-columns 0.3s ease;
+    transition: grid-template-columns 0.8s cubic-bezier(.77,0,.18,1);
 }
+
+.color-grid.hover-1 { grid-template-columns: 1.5fr 1fr 1fr 1fr; }
+.color-grid.hover-2 { grid-template-columns: 1fr 1.5fr 1fr 1fr; }
+.color-grid.hover-3 { grid-template-columns: 1fr 1fr 1.5fr 1fr; }
+.color-grid.hover-4 { grid-template-columns: 1fr 1fr 1fr 1.5fr; }
 
 .grid-item {
     height: 200px;
-    width: 1fr;
     background-color: #222;
     border: 1px solid #ddd;
     border-radius: 25px;
@@ -90,15 +94,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.8s cubic-bezier(.77,0,.18,1), box-shadow 0.8s cubic-bezier(.77,0,.18,1);
     cursor: pointer;
 }
 
-.color-grid:hover .grid-item{
-    width: 1fr;
-}
-
-.color-grid:hover .grid-item:hover{
-    width: 1.5fr;
+.grid-item:hover {
+    transform: scale(1.07);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
 }
 
