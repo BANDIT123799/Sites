@@ -94,7 +94,7 @@ body {
 .color-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 10px;
     padding: 0 75px;
     transition: grid-template-columns 0.8s cubic-bezier(.77,0,.18,1);
