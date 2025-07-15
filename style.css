@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+
+header {
+    background-color: white;
+    color: black;
+    text-align: left;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.github-link {
+    font-family: 'Barlow Condensed', Arial, sans-serif;
+    font-weight: 500;
+    position: fixed;
+    top: 20px;
+    right: 75px;
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+    font-family: 'Barlow Condensed', Arial, sans-serif;
+    font-weight: 500;
+    margin-left: 0px;
+    padding-left: 75px;
+    z-index: 1000;
+    height: 32px;
+}
+
+body {
+    margin: 0;           
+    padding-top: 50px;
+}
