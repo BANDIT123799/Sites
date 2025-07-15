@@ -1,11 +1,3 @@
-@font-face {
-  font-family: 'Barlow Condensed';
-  font-style: normal;
-  font-weight: 500;
-  src: url('/fonts/barlow-condensed-v14-latin-500.woff2') format('woff2');
-  font-display: swap;
-}
-
 * {
     box-sizing: border-box;
 }
