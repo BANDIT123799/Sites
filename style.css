@@ -5,14 +5,13 @@
 header {
     display: flex;
     align-items: center;
+    box-sizing: border-box;
     background-color: white;
     color: black;
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
     height: 70px;
+    min-height: 70px;
+    max-height: 70px;
     justify-content: space-between;
     padding: 0 75px;
 }
@@ -23,6 +22,7 @@ header {
     font-family: 'Barlow Condensed', Arial, sans-serif;
     font-weight: 500;
     font-size: 22px;
+    height: 22px;
     line-height: 1;
     text-decoration: none;
     color: black;
@@ -47,7 +47,36 @@ header {
     padding: 0;
 }
 
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+h1 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+
+main {
+    flex: 1;
+}
+
 footer {
+    flex-shrink: 0;
+    height: 70px;
+    min-height: 70px;
+    max-height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,19 +84,10 @@ footer {
     font-family: 'Barlow Condensed', Arial, sans-serif;
     color: black;
     text-align: center;
-    padding: 20px 0;
-    margin: 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 70px;
+    box-sizing: border-box;
     padding: 0 75px;
-}
-
-body {
     margin: 0;
-    padding-top: 70px;
-    height: 100vh;
+    width: 100%;
 }
 
 .color-grid {
@@ -75,6 +95,9 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
+    width: var(--h1-width);
+    max-width: var(--h1-max-width);
+    margin: 0 auto;
     padding: 0 75px;
     transition: grid-template-columns 0.8s cubic-bezier(.77,0,.18,1);
 }
@@ -117,3 +140,57 @@ body {
     opacity: 1;
 }
 
+:root {
+    --main-width: 100%;
+    --main-max-width: 1280px;
+    --main-padding: 75px;
+}
+
+h1,
+.color-grid {
+    width: var(--main-width);
+    max-width: var(--main-max-width);
+    margin: 0 auto;
+    padding-left: var(--main-padding);
+    padding-right: var(--main-padding);
+    box-sizing: border-box;
+}
+
+@media(max-width: 768px) {
+    :root {
+        --main-padding: 20px;
+    }
+    h1,
+    .color-grid {
+        padding-left: var(--main-padding);
+        padding-right: var(--main-padding);
+    }
+    header {
+        height: 70px;
+        min-height: 70px;
+        max-height: 70px;
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    h1 {
+        font-size: 28px;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: auto;
+    }
+    .color-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        padding: 10px 75px;
+        width: var(--h1-width);
+    }
+    .color-grid.hover-1, .color-grid.hover-2, .color-grid.hover-3, .color-grid.hover-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-item {
+        height: 150px;
+    }
+    .textbox {
+        font-size: 16px;
+    }
+}

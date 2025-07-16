@@ -16,15 +16,26 @@
 
 <title>School site</title>
 <style>
+  :root {
+    --h1-width: 100%;
+    --h1-max-width: 1280px;
+  }
   h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Roboto Condensed', Arial, sans-serif;
     font-weight: 700;
+    font-size: 40px;
     margin-top: 30px;
     margin-bottom: 30px;
     padding-left: 75px;
     padding-right: 75px;
     z-index: 1000;
-    height: 32px;
+    height: 80px;
+    width: var(--h1-width);
+    max-width: var(--h1-max-width);
+    margin: 0 auto;
     text-align: center;
 }
 </style>
@@ -35,7 +46,8 @@
     <img src="assets/github (1).webp" alt="GitHub" width="1" height="1" style="vertical-align: middle;"> Repository
 </a>
 </header>
-              <h1>This is a representation of the school website</h1>
+<main>
+              <h1>This is a representation of the school website</h1>              
 <div class="color-grid">
     <div class="grid-item"><div class="textbox">Box 1</div></div>
     <div class="grid-item"><div class="textbox">Box 2</div></div>
@@ -46,6 +58,7 @@
     <div class="grid-item"><div class="textbox">Box 7</div></div>
     <div class="grid-item"><div class="textbox">Box 8</div></div>
 </div>
+</main>
 <footer>
     <p><div class="footer-text">&copy; 202X School Name. All rights reserved.
     <br>
